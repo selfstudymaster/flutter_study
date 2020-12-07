@@ -72,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void didUpdateWidget(HomeScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
+    print("didUpdateWidget");
     Fluttertoast.showToast(
         msg: "didUpdateWidget",
         toastLength: Toast.LENGTH_SHORT,

@@ -58,7 +58,41 @@ class _NextScreenState extends State<NextScreen> {
           RaisedButton(
             child: Text("戻る"),
             onPressed: () => Navigator.pop(context),
-          )
+          ),
+
+          Expanded(
+            flex: 1,
+            child: ListView(
+              children: [
+                Card(
+                  child: ListTile(
+                    leading: Icon(Icons.access_alarm),
+                      title:Text("中身1"),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    leading: Icon(Icons.access_alarm),
+                    title:Text("中身2"),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    leading: Icon(Icons.access_alarm),
+                    title:Text("中身3"),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    leading: Icon(Icons.access_alarm),
+                    title:Text("中身4"),
+                  ),
+                ),
+              ],
+
+            ),
+          ),
+
         ],
       ),
     );

@@ -10,6 +10,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  TextEditingController _textEditingController = TextEditingController();
+
   // 2
   // 初回のみ呼び出される
   // BuildContextは使えない
@@ -55,11 +58,16 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
+          TextField(
+            controller: _textEditingController,
+
+          ),
+
           RaisedButton(
             child: Text("遷移"),
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NextScreen()),
+              MaterialPageRoute(builder: (context) => NextScreen(text: _textEditingController.text)),
             ),
           )
         ],
@@ -106,6 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
+    _textEditingController.dispose();
     print("dispose");
     Fluttertoast.showToast(
         msg: "dispose",

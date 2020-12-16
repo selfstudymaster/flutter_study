@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class NextScreen extends StatefulWidget {
+
+  final String text;
+
+  NextScreen({this.text});
+
   @override
   _NextScreenState createState() => _NextScreenState();
 }
@@ -55,6 +60,9 @@ class _NextScreenState extends State<NextScreen> {
       ),
       body: Column(
         children: [
+
+          Text(widget.text),
+
           RaisedButton(
             child: Text("戻る"),
             onPressed: () => Navigator.pop(context),

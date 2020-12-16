@@ -72,27 +72,25 @@ class _NextScreenState extends State<NextScreen> {
                 ),
                 Card(
                   child: ListTile(
-                    leading: Icon(Icons.access_alarm),
+                    leading: Icon(Icons.close),
                     title:Text("中身2"),
                   ),
                 ),
                 Card(
                   child: ListTile(
-                    leading: Icon(Icons.access_alarm),
+                    leading: Icon(Icons.delete),
                     title:Text("中身3"),
                   ),
                 ),
                 Card(
                   child: ListTile(
-                    leading: Icon(Icons.access_alarm),
+                    leading: Icon(Icons.accessibility_new),
                     title:Text("中身4"),
                   ),
                 ),
               ],
-
             ),
           ),
-
         ],
       ),
     );
